@@ -1,0 +1,148 @@
+{
+  "nama_turnamen": "Turnamen Karambol v2",
+  "ronde_aktif": 1,
+  "status_turnamen": "active",
+  "total_pemain": 20,
+  "klasemen": [
+    {
+      "peringkat": 1,
+      "nama_pemain": "Paman Tamil",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 2,
+      "nama_pemain": "Pak RT Teguh",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 3,
+      "nama_pemain": "Pak Ayat",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 4,
+      "nama_pemain": "Paman AA",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 5,
+      "nama_pemain": "Firman",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 6,
+      "nama_pemain": "Rafi",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 7,
+      "nama_pemain": "Kang Gonong",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 8,
+      "nama_pemain": "Kang Waik",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 9,
+      "nama_pemain": "Agung",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 10,
+      "nama_pemain": "Pak Teguh",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 11,
+      "nama_pemain": "Paman Hudi",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 12,
+      "nama_pemain": "Kang Aing",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 13,
+      "nama_pemain": "Wa Olih",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 14,
+      "nama_pemain": "Humam",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 15,
+      "nama_pemain": "Kang Burhan 1",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 16,
+      "nama_pemain": "Kang Burhan 2",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 17,
+      "nama_pemain": "Mbah Udin",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 18,
+      "nama_pemain": "Kang Krama",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 19,
+      "nama_pemain": "Paman Bangi",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    },
+    {
+      "peringkat": 20,
+      "nama_pemain": "Mami",
+      "jumlah_main": 0,
+      "jumlah_poin": 0,
+      "riwayat_skor": []
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "version": 2,
+  "status": "active",
+  "current_round": 1,
+  "players": [
+    {
+      "id": "P01",
+      "name": "Paman Tamil",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P02",
+      "name": "Pak RT Teguh",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P03",
+      "name": "Pak Ayat",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P04",
+      "name": "Paman AA",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P05",
+      "name": "Firman",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P06",
+      "name": "Rafi",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P07",
+      "name": "Kang Gonong",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P08",
+      "name": "Kang Waik",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P09",
+      "name": "Agung",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P10",
+      "name": "Pak Teguh",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P11",
+      "name": "Paman Hudi",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P12",
+      "name": "Kang Aing",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P13",
+      "name": "Wa Olih",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P14",
+      "name": "Humam",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P15",
+      "name": "Kang Burhan 1",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P16",
+      "name": "Kang Burhan 2",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P17",
+      "name": "Mbah Udin",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P18",
+      "name": "Kang Krama",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P19",
+      "name": "Paman Bangi",
+      "points": 0,
+      "played": 0,
+      "results": []
+    },
+    {
+      "id": "P20",
+      "name": "Mami",
+      "points": 0,
+      "played": 0,
+      "results": []
+    }
+  ],
+  "rounds": {
+    "1": {
+      "tables": [
+        {
+          "players": [
+            "P06",
+            "P01",
+            "P07",
+            "P18"
+          ],
+          "result": null,
+          "completed": false
+        },
+        {
+          "players": [
+            "P02",
+            "P08",
+            "P17",
+            "P10"
+          ],
+          "result": null,
+          "completed": false
+        },
+        {
+          "players": [
+            "P11",
+            "P03",
+            "P13",
+            "P05"
+          ],
+          "result": null,
+          "completed": false
+        },
+        {
+          "players": [
+            "P19",
+            "P12",
+            "P14",
+            "P20"
+          ],
+          "result": null,
+          "completed": false
+        },
+        {
+          "players": [
+            "P04",
+            "P16",
+            "P15",
+            "P09"
+          ],
+          "result": null,
+          "completed": false
+        }
+      ]
+    }
+  }
+}

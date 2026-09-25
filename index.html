@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Turnamen Karambol Dusun</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icon FontAwesome dari CDN CDNJS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Atas -->
+    <header class="app-header">
+        <h1>🏆 KARAMBOL POS RONDA</h1>
+        <div class="header-status" id="header-status">Memuat status...</div>
+    </header>
+
+    <!-- Konten Utama (Berubah Sesuai Tab) -->
+    <main class="app-content">
+
+        <!-- TAB 1: KLASEMEN -->
+        <section id="tab-klasemen" class="tab-panel active">
+            <div class="card-info">
+                <span>Zona Lolos 4 Besar (Semi-Final)</span>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col-rank">Pos</th>
+                            <th class="col-name">Nama Pemain</th>
+                            <th>M</th>
+                            <th>Poin</th>
+                            <th>Peluang</th>
+                        </tr>
+                    </thead>
+                    <tbody id="body-klasemen">
+                        <!-- Data Klasemen diisi via Script JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TAB 2: JADWAL -->
+        <section id="tab-jadwal" class="tab-panel">
+            <div class="section-title">
+                <h2>Jadwal Pertandingan Semalam</h2>
+                <p>1 Meja Karambol | Durasi 60 Menit / Match</p>
+            </div>
+            <div id="container-jadwal">
+                <!-- Data Jadwal diisi via Script JS -->
+            </div>
+        </section>
+
+        <!-- TAB 3: PEMAIN -->
+        <section id="tab-pemain" class="tab-panel">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="input-search" placeholder="Cari nama pemain..." onkeyup="filterPemain()">
+            </div>
+            <div class="player-grid" id="container-pemain">
+                <!-- Data Daftar Pemain diisi via Script JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Tab Bar Navigasi Bawah (Mobile First) -->
+    <nav class="bottom-nav">
+        <button class="nav-item active" onclick="switchTab('klasemen', this)">
+            <i class="fa-solid fa-chart-simple"></i>
+            <span>Klasemen</span>
+        </button>
+        <button class="nav-item" onclick="switchTab('jadwal', this)">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>Jadwal</span>
+        </button>
+        <button class="nav-item" onclick="switchTab('pemain', this)">
+            <i class="fa-solid fa-users"></i>
+            <span>Pemain</span>
+        </button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
