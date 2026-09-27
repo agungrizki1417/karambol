@@ -1,29 +1,24 @@
+/**
+ * Modul Generator Analisis & Keterangan Peluang Pemain
+ */
 function hasilkanAnalisisPemain(player, klasemen, rondeAktif, jadwalRonde, dataGlobal) {
-    Oktober
-    Oktober
-    Oktober
-    const nama = player.nama_pemain; Oktober
-    const poin = player.jumlah_poin; Oktober
-    const main = player.jumlah_main; Oktober
-    const ronde = rondeAktif || 1;   Oktober
-    const rank = player.peringkat;   Oktober
+    const nama = player.nama_pemain;
+    const poin = player.jumlah_poin;
+    const main = player.jumlah_main;
+    const ronde = rondeAktif || 1;
+    const rank = player.peringkat;
 
-    Oktober
     const totalMatchRondeIni = jadwalRonde ? jadwalRonde.length : 5;
     const matchSelesaiRondeIni = jadwalRonde ? jadwalRonde.filter(m => m.completed).length : 0;
     const rondeSelesaiPenuh = (matchSelesaiRondeIni === totalMatchRondeIni);
 
-    Oktober
     const sudahTandingDiRondeIni = (main >= ronde);
 
-    Oktober
     let poinPeringkat8 = klasemen && klasemen[7] ? klasemen[7].jumlah_poin : 0;
-    Oktober
     if (!rondeSelesaiPenuh && poinPeringkat8 === 0) {
-        poinPeringkat8 = 0; Oktober
+        poinPeringkat8 = 0;
     }
 
-    Oktober
     let kepadatanBubble = 0;
     if (klasemen) {
         kepadatanBubble = klasemen.filter(k =>
@@ -31,16 +26,14 @@ function hasilkanAnalisisPemain(player, klasemen, rondeAktif, jadwalRonde, dataG
         ).length;
     }
 
-    Oktober
     const sisaMatchPribadi = Math.max(0, 3 - main);
     const potensiMax = poin + (sisaMatchPribadi * 3);
 
-    Oktober
     const riwayat = player.riwayat_skor || player.results || [];
     const lastSkor = riwayat.length > 0 ? riwayat[riwayat.length - 1] : null;
     const secondLastSkor = riwayat.length > 1 ? riwayat[riwayat.length - 2] : null;
 
-    let trenPerforma = "NETRAL"; Oktober
+    let trenPerforma = "NETRAL";
     if (lastSkor !== null) {
         if (lastSkor === 3) trenPerforma = "ON_FIRE";
         else if (lastSkor === 0) trenPerforma = "PENURUNAN";
@@ -48,7 +41,6 @@ function hasilkanAnalisisPemain(player, klasemen, rondeAktif, jadwalRonde, dataG
         else if (secondLastSkor !== null && lastSkor < secondLastSkor) trenPerforma = "TURUN";
     }
 
-    Oktober
     let avgPoinLawan = 0;
     let lawanSemejaList = [];
     let rivalPapanAtasSeMeja = 0;
@@ -80,12 +72,10 @@ function hasilkanAnalisisPemain(player, klasemen, rondeAktif, jadwalRonde, dataG
         }
     }
 
-    Oktober
     let tipeMeja = "SEIMBANG";
     if (avgPoinLawan >= 2.5) tipeMeja = "NERAKA";
     else if (avgPoinLawan <= 1.0) tipeMeja = "RINGAN";
 
-    Oktober
     const sebutanPosisi = (p) => {
         if (rondeSelesaiPenuh) return `Peringkat ke-${p}`;
         if (p <= 3) return `Papan Atas Klasemen Sementara`;
@@ -94,11 +84,7 @@ function hasilkanAnalisisPemain(player, klasemen, rondeAktif, jadwalRonde, dataG
         return `Papan Bawah Klasemen Sementara`;
     };
 
-    Oktober
-    Oktober
-    Oktober
-
-    Oktober
+    // --- KONDISI A: MATEMATIS GUGUR ---
     if (potensiMax < poinPeringkat8 && main > 0 && rondeSelesaiPenuh) {
         const variasiGugur = [
             `Secara kalkulasi matematis, langkah <strong>${nama}</strong> terhenti. Dengan koleksi ${poin} poin dari ${main} match, batas poin maksimal (${potensiMax} pt) tidak lagi mampu mengejar ambang batas 8 Besar (${poinPeringkat8} pt).`,
@@ -108,7 +94,7 @@ function hasilkanAnalisisPemain(player, klasemen, rondeAktif, jadwalRonde, dataG
         return variasiGugur[rank % variasiGugur.length];
     }
 
-    Oktober
+    // --- KONDISI B: FINALE (RONDE 3 SELESAI) ---
     if (ronde === 3 && main === 3 && rondeSelesaiPenuh) {
         if (rank <= 8) {
             return `<strong>RESMI LOLOS!</strong> Selamat untuk <strong>${nama}</strong> yang sukses mengamankan tiket Babak 8 Besar di Peringkat ke-${rank} dengan total ${poin} poin.`;
@@ -117,7 +103,7 @@ function hasilkanAnalisisPemain(player, klasemen, rondeAktif, jadwalRonde, dataG
         }
     }
 
-    Oktober
+    // --- KONDISI C: RONDE 1 ---
     if (ronde === 1) {
         if (!sudahTandingDiRondeIni) {
             let infoProfilLawan = tipeMeja === "NERAKA"
@@ -126,25 +112,21 @@ function hasilkanAnalisisPemain(player, klasemen, rondeAktif, jadwalRonde, dataG
 
             return `<strong>${nama}</strong> bersiap melakoni match perdana di Ronde 1. ${infoProfilLawan} Dengan 3 match utuh (potensi 9 poin), raihan poin di laga awal ini sangat krusial untuk membentuk fondasi posisi di tabel klasemen.`;
         } else {
-            Oktober
             if (lastSkor === 3) {
-                Oktober
                 return `<strong>START PERFEK!</strong> Kemenangan telak 3 poin di Ronde 1 membawa <strong>${nama}</strong> mengamankan ${sebutanPosisi(rank)}. Kinerja konsisten di Ronde 2 dan 3 akan memuluskan langkah menuju Babak 8 Besar.`;
             } else if (lastSkor === 2) {
                 return `<strong>HASIL POSITIF.</strong> <strong>${nama}</strong> mengantongi 2 poin berharga di match pertama (${sebutanPosisi(rank)}). Pijakan awal yang solid untuk menatap laga krusial di Ronde 2.`;
             } else if (lastSkor === 1) {
                 return `<strong>MODAL AWAL 1 POIN.</strong> <strong>${nama}</strong> meraih 1 poin di Ronde 1. Masih ada 2 ronde tersisa untuk mendulang poin maksimal dan merangkak naik ke papan atas.`;
             } else {
-                Oktober
                 return `<strong>PELUANG MASIH TERBUKA.</strong> Meskipun belum mengantongi poin di match pembuka, <strong>${nama}</strong> (${sebutanPosisi(rank)}) masih memiliki potensi hingga 6 poin di 2 ronde tersisa. Kemenangan penuh di Ronde 2 menjadi kunci utama untuk kembali ke jalur persaingan 8 Besar.`;
             }
         }
     }
 
-    Oktober
+    // --- KONDISI D: RONDE 2 ---
     if (ronde === 2) {
         if (!sudahTandingDiRondeIni) {
-            Oktober
             let narasiMeja = "";
             if (rivalPapanAtasSeMeja >= 2) {
                 narasiMeja = ` <strong>Peringatan Meja Keras:</strong> Di Ronde 2 ini, ${nama} satu meja dengan ${rivalPapanAtasSeMeja} rival papan atas. Alokasi poin penuh akan sangat diperebutkan.`;
@@ -162,7 +144,6 @@ function hasilkanAnalisisPemain(player, klasemen, rondeAktif, jadwalRonde, dataG
                 return `<strong>LAGA PENENTUAN.</strong> Mengantongi ${poin} poin, <strong>${nama}</strong> <em>belum tanding di Ronde 2</em>.${narasiMeja} Hasil match ini akan menentukan apakah ${nama} mampu keluar dari papan bawah atau makin terancam.`;
             }
         } else {
-            Oktober
             let narasiTren = "";
             if (trenPerforma === "ON_FIRE") narasiTren = " Tren positif berlanjut usai kemenangan penuh di match baru saja!";
             else if (trenPerforma === "PENURUNAN") narasiTren = " Sayang sekali hasil kurang maksimal didapat pada match Ronde 2 ini.";
@@ -178,10 +159,9 @@ function hasilkanAnalisisPemain(player, klasemen, rondeAktif, jadwalRonde, dataG
         }
     }
 
-    Oktober
+    // --- KONDISI E: RONDE 3 ---
     if (ronde === 3) {
         if (!sudahTandingDiRondeIni) {
-            Oktober
             if (rank <= 8) {
                 if (poin >= 5) {
                     return `<strong>${nama}</strong> (${sebutanPosisi(rank)}, ${poin} pt) <em>belum tanding di Ronde 3</em>. Posisi sangat aman, bermain tenang di meja akhir akan memastikannya lolos resmi ke 8 Besar.`;
@@ -193,7 +173,6 @@ function hasilkanAnalisisPemain(player, klasemen, rondeAktif, jadwalRonde, dataG
                 return `<strong>MISSION IMPOSSIBLE / KEAJAIBAN.</strong> Berada di ${sebutanPosisi(rank)} (${poin} pt), <strong>${nama}</strong> wajib menang Juara 1 (3 pt) di match Ronde 3 ini sambil berharap terjadi pembagian poin menguntungkan di meja-meja pesaing.`;
             }
         } else {
-            Oktober
             if (rank <= 8) {
                 return `<strong>${nama}</strong> telah menyelesaikan seluruh match dengan total ${poin} poin dan menempati ${sebutanPosisi(rank)}. Tinggal menunggu seluruh match di meja lain selesai untuk penutupan resmi.`;
             } else {
@@ -202,6 +181,5 @@ function hasilkanAnalisisPemain(player, klasemen, rondeAktif, jadwalRonde, dataG
         }
     }
 
-    Oktober
     return `<strong>${nama}</strong> mengumpulkan ${poin} poin dari ${main} pertandingan dan berada di ${sebutanPosisi(rank)}.`;
 }
