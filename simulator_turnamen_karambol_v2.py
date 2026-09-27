@@ -10,9 +10,9 @@ TABLES_PER_ROUND = 5
 SCORES = [3, 2, 1, 0]
 
 DEFAULT_NAMES = [
-    "Paman Tamil", "Pak RT Teguh", "Pak Ayat", "Paman AA", "Firman",
+    "Paman Tamil", "Pak RT Teguh", "Pak Ayat", "Paman AA", "Wa Olih",
     "Rafi", "Kang Gonong", "Kang Waik", "Agung", "Pak Teguh",
-    "Paman Hudi", "Kang Aing", "Wa Olih", "Humam", "Kang Burhan 1",
+    "Paman Hudi", "Kang Aing", "Firman", "Humam", "Kang Burhan 1",
     "Kang Burhan 2", "Mbah Udin", "Kang Krama", "Paman Bangi", "Mami"
 ]
 
@@ -45,10 +45,18 @@ def delete_save():
     if os.path.exists(SAVE_FILE):
         os.remove(SAVE_FILE)
 
+def sync_klasemen_manual():
+    state = load_state()
+    if state is None:
+        print("x Tidak ada file turnamen_karambol.json yang ditemukan.")
+        return
+    export_klasemen_json(state)
+    print("✓ Klasemen & jadwal web berhasil diperbarui dari data JSON terbaru!")
+
 def export_klasemen_json(state, filename="klasemen_sementara.json"):
     """
-    Menyimpan data klasemen sementara ke file JSON terpisah
-    dengan format bagan klasemen (20 pemain, main, poin).
+    Menyimpan data klasemen sementara dan jadwal ronde aktif ke file JSON
+    untuk dibaca oleh web dashboard.
     """
     klasemen_data = []
     for pos, p in enumerate(standings(state), 1):
@@ -60,19 +68,36 @@ def export_klasemen_json(state, filename="klasemen_sementara.json"):
             "riwayat_skor": p["results"]
         })
 
+    current_round = state.get("current_round", 1)
+    round_key = str(current_round)
+    tables_data = []
+
+    if round_key in state.get("rounds", {}):
+        for idx, table in enumerate(state["rounds"][round_key]["tables"], 1):
+            tables_data.append({
+                "meja": idx,
+                "players": table["players"],
+                "completed": table.get("completed", False),
+                "result": table.get("result", None)
+            })
+
+    p_map = {p["id"]: p["name"] for p in state["players"]}
+
     payload = {
         "nama_turnamen": "Turnamen Karambol v2",
-        "ronde_aktif": state["current_round"],
-        "status_turnamen": state["status"],
+        "ronde_aktif": current_round,
+        "status_turnamen": state.get("status", "running"),
         "total_pemain": len(state["players"]),
-        "klasemen": klasemen_data
+        "klasemen": klasemen_data,
+        "jadwal_ronde": tables_data,
+        "player_map": p_map
     }
 
     temp = filename + ".tmp"
     with open(temp, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
     os.replace(temp, filename)
-    print(f"✓ Klasemen diperbarui di {filename}")
+    print(f"✓ Klasemen dan jadwal diperbarui di {filename}")
 
 # ============================================================
 # STATE
@@ -134,12 +159,10 @@ def opponent_history(state):
 # ============================================================
 
 def make_round_one_pairing(state):
-    ids = [p["id"] for p in state["players"]]
-    random.shuffle(ids)
-
+    sorted_ids = sorted([p["id"] for p in state["players"]])
     return [
-        ids[i:i + PLAYERS_PER_TABLE]
-        for i in range(0, len(ids), PLAYERS_PER_TABLE)
+        sorted_ids[i:i + PLAYERS_PER_TABLE]
+        for i in range(0, len(sorted_ids), PLAYERS_PER_TABLE)
     ]
 
 
@@ -505,9 +528,10 @@ def main():
     print("1 = Input hasil pertandingan nyata")
     print("2 = Simulasi hasil pertandingan otomatis")
     print("3 = Hapus data turnamen / mulai dari nol")
+    print("4 = Sync / Refresh Klasemen Web (setelah edit manual)")
     print("=" * 64)
 
-    choice = input("Pilih [1/2/3]: ").strip()
+    choice = input("Pilih [1/2/3/4]: ").strip()
 
     if choice == "1":
         run_real_tournament()
@@ -540,6 +564,9 @@ def main():
                 print("Dibatalkan.")
         else:
             print("Belum ada file turnamen_karambol.json.")
+
+    elif choice == "4":
+        sync_klasemen_manual()
 
     else:
         print("Pilihan tidak valid.")
