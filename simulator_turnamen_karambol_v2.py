@@ -12,7 +12,7 @@ SCORES = [3, 2, 1, 0]
 DEFAULT_NAMES = [
     "Paman Tamil", "Pak RT Teguh", "Pak Ayat", "Paman AA", "Wa Olih",
     "Rafi", "Kang Gonong", "Kang Waik", "Agung", "Pak Teguh",
-    "Paman Hudi", "Kang Aing", "Firman", "Humam", "Kang Burhan 1",
+    "Paman Hudi", "Kang Aing", "Firman", "Paman Ir", "Kang Burhan 1",
     "Kang Burhan 2", "Mbah Udin", "Kang Krama", "Paman Bangi", "Mami"
 ]
 
