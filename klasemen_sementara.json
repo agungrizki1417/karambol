@@ -24,6 +24,15 @@
     },
     {
       "peringkat": 3,
+      "nama_pemain": "Paman Hudi",
+      "jumlah_main": 1,
+      "jumlah_poin": 3,
+      "riwayat_skor": [
+        3
+      ]
+    },
+    {
+      "peringkat": 4,
       "nama_pemain": "Pak Ayat",
       "jumlah_main": 1,
       "jumlah_poin": 2,
@@ -32,7 +41,7 @@
       ]
     },
     {
-      "peringkat": 4,
+      "peringkat": 5,
       "nama_pemain": "Kang Waik",
       "jumlah_main": 1,
       "jumlah_poin": 2,
@@ -41,7 +50,16 @@
       ]
     },
     {
-      "peringkat": 5,
+      "peringkat": 6,
+      "nama_pemain": "Pak Teguh",
+      "jumlah_main": 1,
+      "jumlah_poin": 2,
+      "riwayat_skor": [
+        2
+      ]
+    },
+    {
+      "peringkat": 7,
       "nama_pemain": "Pak RT Teguh",
       "jumlah_main": 1,
       "jumlah_poin": 1,
@@ -50,7 +68,7 @@
       ]
     },
     {
-      "peringkat": 6,
+      "peringkat": 8,
       "nama_pemain": "Rafi",
       "jumlah_main": 1,
       "jumlah_poin": 1,
@@ -59,7 +77,7 @@
       ]
     },
     {
-      "peringkat": 7,
+      "peringkat": 9,
       "nama_pemain": "Kang Gonong",
       "jumlah_main": 1,
       "jumlah_poin": 1,
@@ -68,7 +86,16 @@
       ]
     },
     {
-      "peringkat": 8,
+      "peringkat": 10,
+      "nama_pemain": "Agung",
+      "jumlah_main": 1,
+      "jumlah_poin": 1,
+      "riwayat_skor": [
+        1
+      ]
+    },
+    {
+      "peringkat": 11,
       "nama_pemain": "Paman Tamil",
       "jumlah_main": 1,
       "jumlah_poin": 0,
@@ -77,32 +104,13 @@
       ]
     },
     {
-      "peringkat": 9,
-      "nama_pemain": "Agung",
-      "jumlah_main": 0,
-      "jumlah_poin": 0,
-      "riwayat_skor": []
-    },
-    {
-      "peringkat": 10,
-      "nama_pemain": "Pak Teguh",
-      "jumlah_main": 0,
-      "jumlah_poin": 0,
-      "riwayat_skor": []
-    },
-    {
-      "peringkat": 11,
-      "nama_pemain": "Paman Hudi",
-      "jumlah_main": 0,
-      "jumlah_poin": 0,
-      "riwayat_skor": []
-    },
-    {
       "peringkat": 12,
-      "nama_pemain": "Kang Aing",
-      "jumlah_main": 0,
+      "nama_pemain": "Mbah Udin",
+      "jumlah_main": 1,
       "jumlah_poin": 0,
-      "riwayat_skor": []
+      "riwayat_skor": [
+        0
+      ]
     },
     {
       "peringkat": 13,
@@ -134,7 +142,7 @@
     },
     {
       "peringkat": 17,
-      "nama_pemain": "Mbah Udin",
+      "nama_pemain": "Kang Aing",
       "jumlah_main": 0,
       "jumlah_poin": 0,
       "riwayat_skor": []
@@ -202,8 +210,13 @@
         "P11",
         "P12"
       ],
-      "completed": false,
-      "result": null
+      "completed": true,
+      "result": [
+        "P11",
+        "P10",
+        "P09",
+        "P12"
+      ]
     },
     {
       "meja": 4,
@@ -240,12 +253,12 @@
     "P09": "Agung",
     "P10": "Pak Teguh",
     "P11": "Paman Hudi",
-    "P12": "Kang Aing",
+    "P12": "Mbah Udin",
     "P13": "Firman",
     "P14": "Humam",
     "P15": "Kang Burhan 1",
     "P16": "Kang Burhan 2",
-    "P17": "Mbah Udin",
+    "P17": "Kang Aing",
     "P18": "Kang Krama",
     "P19": "Paman Bangi",
     "P20": "Mami"
