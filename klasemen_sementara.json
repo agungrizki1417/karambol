@@ -73,20 +73,11 @@
       "jumlah_main": 1,
       "jumlah_poin": 1,
       "riwayat_skor": [
-        1
-      ]
-    },
-    {
-      "peringkat": 9,
-      "nama_pemain": "Kang Gonong",
-      "jumlah_main": 1,
-      "jumlah_poin": 0,
-      "riwayat_skor": [
         0
       ]
     },
     {
-      "peringkat": 10,
+      "peringkat": 9,
       "nama_pemain": "Agung",
       "jumlah_main": 1,
       "jumlah_poin": 1,
@@ -95,12 +86,21 @@
       ]
     },
     {
-      "peringkat": 11,
+      "peringkat": 10,
       "nama_pemain": "Paman Tamil",
       "jumlah_main": 1,
       "jumlah_poin": 0,
       "riwayat_skor": [
         0
+      ]
+    },
+    {
+      "peringkat": 11,
+      "nama_pemain": "Kang Gonong",
+      "jumlah_main": 1,
+      "jumlah_poin": 0,
+      "riwayat_skor": [
+        1
       ]
     },
     {
@@ -135,7 +135,7 @@
     },
     {
       "peringkat": 16,
-      "nama_pemain": "Kang Burhan 2",
+      "nama_pemain": "Bye 1",
       "jumlah_main": 0,
       "jumlah_poin": 0,
       "riwayat_skor": []
@@ -149,14 +149,14 @@
     },
     {
       "peringkat": 18,
-      "nama_pemain": "Kang Krama",
+      "nama_pemain": "Bye 2",
       "jumlah_main": 0,
       "jumlah_poin": 0,
       "riwayat_skor": []
     },
     {
       "peringkat": 19,
-      "nama_pemain": "Paman Bangi",
+      "nama_pemain": "Mas Humam",
       "jumlah_main": 0,
       "jumlah_poin": 0,
       "riwayat_skor": []
@@ -257,10 +257,10 @@
     "P13": "Firman",
     "P14": "Paman Ir",
     "P15": "Kang Burhan 1",
-    "P16": "Kang Burhan 2",
+    "P16": "Bye 1",
     "P17": "Kang Aing",
-    "P18": "Kang Krama",
-    "P19": "Paman Bangi",
+    "P18": "Bye 2",
+    "P19": "Mas Humam",
     "P20": "Mami"
   }
 }

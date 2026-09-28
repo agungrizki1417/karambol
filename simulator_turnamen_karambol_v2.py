@@ -10,10 +10,26 @@ TABLES_PER_ROUND = 5
 SCORES = [3, 2, 1, 0]
 
 DEFAULT_NAMES = [
-    "Paman Tamil", "Pak RT Teguh", "Pak Ayat", "Paman AA", "Wa Olih",
-    "Rafi", "Kang Gonong", "Kang Waik", "Agung", "Pak Teguh",
-    "Paman Hudi", "Kang Aing", "Firman", "Paman Ir", "Kang Burhan 1",
-    "Kang Burhan 2", "Mbah Udin", "Kang Krama", "Paman Bangi", "Mami"
+    "Paman Tamil",    # P01
+    "Pak RT Teguh",   # P02
+    "Pak Ayat",       # P03
+    "Paman AA",       # P04
+    "Wa Olih",        # P05
+    "Rafi",           # P06
+    "Kang Gonong",    # P07
+    "Kang Waik",      # P08
+    "Agung",          # P09
+    "Pak Teguh",      # P10
+    "Paman Hudi",     # P11
+    "Mbah Udin",      # P12
+    "Firman",         # P13
+    "Paman Ir",       # P14
+    "Kang Burhan 1",  # P15
+    "BYE 1",          # P16
+    "Kang Aing",      # P17
+    "BYE 2",          # P18
+    "Mas Humam",      # P19
+    "Mami"            # P20
 ]
 
 
