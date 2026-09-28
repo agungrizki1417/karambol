@@ -114,30 +114,38 @@
     {
       "id": "P13",
       "name": "Firman",
-      "points": 0,
-      "played": 0,
-      "results": []
+      "points": 1,
+      "played": 1,
+      "results": [
+        1
+      ]
     },
     {
       "id": "P14",
       "name": "Paman Ir",
-      "points": 0,
-      "played": 0,
-      "results": []
+      "points": 3,
+      "played": 1,
+      "results": [
+        3
+      ]
     },
     {
       "id": "P15",
       "name": "Kang Burhan 1",
-      "points": 0,
-      "played": 0,
-      "results": []
+      "points": 2,
+      "played": 1,
+      "results": [
+        2
+      ]
     },
     {
       "id": "P16",
       "name": "Bye 1",
       "points": 0,
-      "played": 0,
-      "results": []
+      "played": 1,
+      "results": [
+        0
+      ]
     },
     {
       "id": "P17",
@@ -223,8 +231,13 @@
             "P15",
             "P16"
           ],
-          "result": null,
-          "completed": false
+          "result": [
+            "P14",
+            "P15",
+            "P13",
+            "P16"
+          ],
+          "completed": true
         },
         {
           "players": [
