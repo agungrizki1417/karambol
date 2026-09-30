@@ -9,6 +9,9 @@ function switchTab(tabName, el) {
 }
 
 function hitungPeluangLolos(player, klasemen, rondeAktif, jadwalRonde) {
+    if (player.nama_pemain && player.nama_pemain.toLowerCase().includes('bye')) {
+        return 0;
+    }
     const poin = player.jumlah_poin;
     const main = player.jumlah_main;
     const rank = player.peringkat;
@@ -316,6 +319,13 @@ function urutkanKlasemenTanpaBias(klasemen) {
     if (!klasemen || !Array.isArray(klasemen)) return [];
 
     return [...klasemen].sort((a, b) => {
+        const isByeA = a.nama_pemain.toLowerCase().includes('bye');
+        const isByeB = b.nama_pemain.toLowerCase().includes('bye');
+
+        if (isByeA && !isByeB) return 1;
+        if (!isByeA && isByeB) return -1;
+        // ----------------------------------------------
+
         if (b.jumlah_poin !== a.jumlah_poin) {
             return b.jumlah_poin - a.jumlah_poin;
         }
