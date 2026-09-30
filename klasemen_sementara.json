@@ -193,10 +193,10 @@
     {
       "meja": 1,
       "players": [
-        "P04",
         "P05",
-        "P14",
-        "P11"
+        "P11",
+        "P04",
+        "P14"
       ],
       "completed": true,
       "result": [
@@ -210,9 +210,9 @@
       "meja": 2,
       "players": [
         "P20",
-        "P03",
-        "P10",
-        "P08"
+        "P08",
+        "P15",
+        "P10"
       ],
       "completed": false,
       "result": null
@@ -221,9 +221,9 @@
       "meja": 3,
       "players": [
         "P19",
-        "P15",
-        "P06",
-        "P02"
+        "P03",
+        "P13",
+        "P06"
       ],
       "completed": false,
       "result": null
@@ -231,10 +231,10 @@
     {
       "meja": 4,
       "players": [
-        "P13",
         "P09",
         "P17",
-        "P07"
+        "P02",
+        "P16"
       ],
       "completed": false,
       "result": null
@@ -242,9 +242,9 @@
     {
       "meja": 5,
       "players": [
-        "P18",
         "P12",
-        "P16",
+        "P07",
+        "P18",
         "P01"
       ],
       "completed": false,

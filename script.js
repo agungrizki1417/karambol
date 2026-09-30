@@ -216,18 +216,18 @@ function renderJadwalSimulasi() {
             { tgl: "Senin, 28 September 2026", jam: "20.00 - 21.00 WIB" }
         ],
         2: [
-            { tgl: "Senin, 28 September 2026", jam: "21.00 - 22.00 WIB" },
             { tgl: "Selasa, 29 September 2026", jam: "20.00 - 21.00 WIB" },
-            { tgl: "Selasa, 29 September 2026", jam: "21.00 - 22.00 WIB" },
             { tgl: "Rabu, 30 September 2026", jam: "20.00 - 21.00 WIB" },
-            { tgl: "Rabu, 30 September 2026", jam: "21.00 - 22.00 WIB" }
+            { tgl: "Rabu, 30 September 2026", jam: "21.00 - 22.00 WIB" },
+            { tgl: "Kamis, 1 Oktober 2026", jam: "20.00 - 21.00 WIB" },
+            { tgl: "Kamis, 1 Oktober 2026", jam: "21.00 - 22.00 WIB" }
         ],
         3: [
-            { tgl: "Kamis, 1 Oktober 2026", jam: "20.00 - 21.00 WIB" },
-            { tgl: "Kamis, 1 Oktober 2026", jam: "21.00 - 22.00 WIB" },
             { tgl: "Jumat, 2 Oktober 2026", jam: "20.00 - 21.00 WIB" },
             { tgl: "Jumat, 2 Oktober 2026", jam: "21.00 - 22.00 WIB" },
-            { tgl: "Sabtu, 3 Oktober 2026", jam: "20.00 - 21.00 WIB" }
+            { tgl: "Sabtu, 3 Oktober 2026", jam: "20.00 - 21.00 WIB" },
+            { tgl: "Sabtu, 3 Oktober 2026", jam: "21.00 - 22.00 WIB" },
+            { tgl: "Minggu, 4 Oktober 2026", jam: "20.00 - 21.00 WIB" }
         ]
     };
 

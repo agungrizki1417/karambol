@@ -191,14 +191,21 @@ def table_quality(table, lookup, history):
     score_range = max(points) - min(points)
 
     rematches = 0
+    bye_count = 0
+
     for i in range(len(table)):
+        # Hitung jumlah BYE di meja ini
+        if "bye" in lookup[table[i]]["name"].lower():
+            bye_count += 1
+
         for j in range(i + 1, len(table)):
             if table[j] in history[table[i]]:
                 rematches += 1
 
-    # Poin yang terlalu jauh lebih diprioritaskan untuk dihindari.
-    # Rematch diberi penalti, tetapi tidak dilarang.
-    return (score_range * 100) + (rematches * 10)
+    # Denda sangat berat (100.000) jika ada lebih dari 1 BYE di meja yang sama
+    bye_penalty = 100000 if bye_count > 1 else 0
+
+    return (score_range * 100) + (rematches * 10) + bye_penalty
 
 
 def make_swiss_pairing(state):
@@ -209,9 +216,7 @@ def make_swiss_pairing(state):
     best_tables = None
     best_score = float("inf")
 
-    # Heuristik Swiss sederhana:
-    # cari kandidat berkali-kali dan ambil pembagian dengan skor terbaik.
-    for _ in range(3000):
+    for _ in range(5000):
         groups = defaultdict(list)
 
         for p in players:
@@ -219,15 +224,12 @@ def make_swiss_pairing(state):
 
         ordered = []
 
-        # Pemain dengan poin sama dikelompokkan,
-        # lalu urutan dalam kelompok diacak.
         for points in sorted(groups.keys(), reverse=True):
             group = groups[points][:]
             random.shuffle(group)
             ordered.extend(group)
 
-        # Sesekali variasikan urutan untuk menghindari hasil yang kaku.
-        if random.random() < 0.20:
+        if random.random() < 0.25:
             random.shuffle(ordered)
 
         tables = [

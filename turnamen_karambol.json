@@ -272,10 +272,10 @@
       "tables": [
         {
           "players": [
-            "P04",
             "P05",
-            "P14",
-            "P11"
+            "P11",
+            "P04",
+            "P14"
           ],
           "result": [
             "P04",
@@ -288,9 +288,9 @@
         {
           "players": [
             "P20",
-            "P03",
-            "P10",
-            "P08"
+            "P08",
+            "P15",
+            "P10"
           ],
           "result": null,
           "completed": false
@@ -298,28 +298,28 @@
         {
           "players": [
             "P19",
-            "P15",
-            "P06",
-            "P02"
+            "P03",
+            "P13",
+            "P06"
           ],
           "result": null,
           "completed": false
         },
         {
           "players": [
-            "P13",
             "P09",
             "P17",
-            "P07"
+            "P02",
+            "P16"
           ],
           "result": null,
           "completed": false
         },
         {
           "players": [
-            "P18",
             "P12",
-            "P16",
+            "P07",
+            "P18",
             "P01"
           ],
           "result": null,
