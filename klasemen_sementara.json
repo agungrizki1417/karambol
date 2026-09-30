@@ -1,39 +1,52 @@
 {
   "nama_turnamen": "Turnamen Karambol v2",
-  "ronde_aktif": 1,
+  "ronde_aktif": 2,
   "status_turnamen": "active",
   "total_pemain": 20,
   "klasemen": [
     {
       "peringkat": 1,
       "nama_pemain": "Paman AA",
-      "jumlah_main": 1,
-      "jumlah_poin": 3,
+      "jumlah_main": 2,
+      "jumlah_poin": 6,
       "riwayat_skor": [
+        3,
         3
       ]
     },
     {
       "peringkat": 2,
-      "nama_pemain": "Wa Olih",
-      "jumlah_main": 1,
-      "jumlah_poin": 3,
+      "nama_pemain": "Paman Ir",
+      "jumlah_main": 2,
+      "jumlah_poin": 5,
       "riwayat_skor": [
-        3
+        3,
+        2
       ]
     },
     {
       "peringkat": 3,
       "nama_pemain": "Paman Hudi",
-      "jumlah_main": 1,
-      "jumlah_poin": 3,
+      "jumlah_main": 2,
+      "jumlah_poin": 4,
       "riwayat_skor": [
-        3
+        3,
+        1
       ]
     },
     {
       "peringkat": 4,
-      "nama_pemain": "Paman Ir",
+      "nama_pemain": "Wa Olih",
+      "jumlah_main": 2,
+      "jumlah_poin": 3,
+      "riwayat_skor": [
+        3,
+        0
+      ]
+    },
+    {
+      "peringkat": 5,
+      "nama_pemain": "Mami",
       "jumlah_main": 1,
       "jumlah_poin": 3,
       "riwayat_skor": [
@@ -41,7 +54,7 @@
       ]
     },
     {
-      "peringkat": 5,
+      "peringkat": 6,
       "nama_pemain": "Pak Ayat",
       "jumlah_main": 1,
       "jumlah_poin": 2,
@@ -50,7 +63,7 @@
       ]
     },
     {
-      "peringkat": 6,
+      "peringkat": 7,
       "nama_pemain": "Kang Waik",
       "jumlah_main": 1,
       "jumlah_poin": 2,
@@ -59,7 +72,7 @@
       ]
     },
     {
-      "peringkat": 7,
+      "peringkat": 8,
       "nama_pemain": "Pak Teguh",
       "jumlah_main": 1,
       "jumlah_poin": 2,
@@ -68,7 +81,7 @@
       ]
     },
     {
-      "peringkat": 8,
+      "peringkat": 9,
       "nama_pemain": "Kang Burhan 1",
       "jumlah_main": 1,
       "jumlah_poin": 2,
@@ -77,7 +90,16 @@
       ]
     },
     {
-      "peringkat": 9,
+      "peringkat": 10,
+      "nama_pemain": "Kang Burhan 2",
+      "jumlah_main": 1,
+      "jumlah_poin": 2,
+      "riwayat_skor": [
+        2
+      ]
+    },
+    {
+      "peringkat": 11,
       "nama_pemain": "Pak RT Teguh",
       "jumlah_main": 1,
       "jumlah_poin": 1,
@@ -86,7 +108,7 @@
       ]
     },
     {
-      "peringkat": 10,
+      "peringkat": 12,
       "nama_pemain": "Rafi",
       "jumlah_main": 1,
       "jumlah_poin": 1,
@@ -95,7 +117,7 @@
       ]
     },
     {
-      "peringkat": 11,
+      "peringkat": 13,
       "nama_pemain": "Agung",
       "jumlah_main": 1,
       "jumlah_poin": 1,
@@ -104,7 +126,7 @@
       ]
     },
     {
-      "peringkat": 12,
+      "peringkat": 14,
       "nama_pemain": "Firman",
       "jumlah_main": 1,
       "jumlah_poin": 1,
@@ -113,7 +135,16 @@
       ]
     },
     {
-      "peringkat": 13,
+      "peringkat": 15,
+      "nama_pemain": "Kang Aing",
+      "jumlah_main": 1,
+      "jumlah_poin": 1,
+      "riwayat_skor": [
+        1
+      ]
+    },
+    {
+      "peringkat": 16,
       "nama_pemain": "Paman Tamil",
       "jumlah_main": 1,
       "jumlah_poin": 0,
@@ -122,7 +153,7 @@
       ]
     },
     {
-      "peringkat": 14,
+      "peringkat": 17,
       "nama_pemain": "Kang Gonong",
       "jumlah_main": 1,
       "jumlah_poin": 0,
@@ -131,7 +162,7 @@
       ]
     },
     {
-      "peringkat": 15,
+      "peringkat": 18,
       "nama_pemain": "Mbah Udin",
       "jumlah_main": 1,
       "jumlah_poin": 0,
@@ -140,7 +171,7 @@
       ]
     },
     {
-      "peringkat": 16,
+      "peringkat": 19,
       "nama_pemain": "Bye 1",
       "jumlah_main": 1,
       "jumlah_poin": 0,
@@ -149,106 +180,72 @@
       ]
     },
     {
-      "peringkat": 17,
-      "nama_pemain": "Kang Aing",
-      "jumlah_main": 0,
-      "jumlah_poin": 0,
-      "riwayat_skor": []
-    },
-    {
-      "peringkat": 18,
-      "nama_pemain": "Bye 2",
-      "jumlah_main": 0,
-      "jumlah_poin": 0,
-      "riwayat_skor": []
-    },
-    {
-      "peringkat": 19,
-      "nama_pemain": "Mas Humam",
-      "jumlah_main": 0,
-      "jumlah_poin": 0,
-      "riwayat_skor": []
-    },
-    {
       "peringkat": 20,
-      "nama_pemain": "Mami",
-      "jumlah_main": 0,
+      "nama_pemain": "Bye 2",
+      "jumlah_main": 1,
       "jumlah_poin": 0,
-      "riwayat_skor": []
+      "riwayat_skor": [
+        0
+      ]
     }
   ],
   "jadwal_ronde": [
     {
       "meja": 1,
       "players": [
-        "P01",
-        "P02",
-        "P03",
-        "P04"
+        "P04",
+        "P05",
+        "P14",
+        "P11"
       ],
       "completed": true,
       "result": [
         "P04",
-        "P03",
-        "P02",
-        "P01"
+        "P14",
+        "P11",
+        "P05"
       ]
     },
     {
       "meja": 2,
       "players": [
-        "P05",
-        "P06",
-        "P07",
+        "P20",
+        "P03",
+        "P10",
         "P08"
       ],
-      "completed": true,
-      "result": [
-        "P05",
-        "P08",
-        "P06",
-        "P07"
-      ]
+      "completed": false,
+      "result": null
     },
     {
       "meja": 3,
       "players": [
-        "P09",
-        "P10",
-        "P11",
-        "P12"
+        "P19",
+        "P15",
+        "P06",
+        "P02"
       ],
-      "completed": true,
-      "result": [
-        "P11",
-        "P10",
-        "P09",
-        "P12"
-      ]
+      "completed": false,
+      "result": null
     },
     {
       "meja": 4,
       "players": [
         "P13",
-        "P14",
-        "P15",
-        "P16"
+        "P09",
+        "P17",
+        "P07"
       ],
-      "completed": true,
-      "result": [
-        "P14",
-        "P15",
-        "P13",
-        "P16"
-      ]
+      "completed": false,
+      "result": null
     },
     {
       "meja": 5,
       "players": [
-        "P17",
         "P18",
-        "P19",
-        "P20"
+        "P12",
+        "P16",
+        "P01"
       ],
       "completed": false,
       "result": null
@@ -273,7 +270,7 @@
     "P16": "Bye 1",
     "P17": "Kang Aing",
     "P18": "Bye 2",
-    "P19": "Mas Humam",
+    "P19": "Kang Burhan 2",
     "P20": "Mami"
   }
 }

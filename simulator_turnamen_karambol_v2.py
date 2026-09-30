@@ -28,7 +28,7 @@ DEFAULT_NAMES = [
     "BYE 1",          # P16
     "Kang Aing",      # P17
     "BYE 2",          # P18
-    "Mas Humam",      # P19
+    "Kang Burhan 2",  # P19
     "Mami"            # P20
 ]
 

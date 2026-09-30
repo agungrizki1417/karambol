@@ -12,16 +12,16 @@
 
 <body>
 
-    
+    <!-- Header Aplikasi -->
     <header class="app-header">
         <h1>🏆 KARAMBOL POS RONDA</h1>
         <div class="header-status" id="header-status">Memuat status...</div>
     </header>
 
-    
+    <!-- Konten Utama -->
     <main class="app-content">
 
-        
+        <!-- Tab 1: Klasemen -->
         <section id="tab-klasemen" class="tab-panel active">
             <div class="card-info">
                 <span>Zona Lolos 8 Besar (Semi-Final)</span>
@@ -45,18 +45,29 @@
             </div>
         </section>
 
-        
+        <!-- Tab 2: Jadwal & Riwayat Pairing -->
         <section id="tab-jadwal" class="tab-panel">
             <div class="section-title">
-                <h2>Jadwal Pertandingan Semalam</h2>
+                <h2>Jadwal & Riwayat Pertandingan</h2>
                 <p>1 Meja Karambol | Durasi 60 Menit | 2 Match / Malam</p>
             </div>
+
+            <!-- Filter Pilih Ronde -->
+            <div class="ronde-filter-container">
+                <label for="select-ronde"><i class="fa-solid fa-filter"></i> Pilih Ronde:</label>
+                <select id="select-ronde" onchange="gantiRondeJadwal(this.value)">
+                    <option value="1">Ronde 1</option>
+                    <option value="2">Ronde 2</option>
+                    <option value="3">Ronde 3</option>
+                </select>
+            </div>
+
             <div id="container-jadwal">
                 
             </div>
         </section>
 
-        
+        <!-- Tab 3: Daftar Pemain -->
         <section id="tab-pemain" class="tab-panel">
             <div class="search-box">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -69,7 +80,7 @@
 
     </main>
 
-    
+    <!-- Bottom Navigation -->
     <nav class="bottom-nav">
         <button class="nav-item active" onclick="switchTab('klasemen', this)">
             <i class="fa-solid fa-chart-simple"></i>
@@ -85,7 +96,7 @@
         </button>
     </nav>
 
-    
+    <!-- Modal Analisis Peluang -->
     <div id="modal-analisis" class="modal-overlay" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">
@@ -102,7 +113,7 @@
         </div>
     </div>
 
-    
+    <!-- Modal Autentikasi PIN Panitia -->
     <div id="modal-auth" class="modal-overlay" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">

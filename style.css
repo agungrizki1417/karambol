@@ -134,6 +134,33 @@ tr.top-4 td.col-rank {
 .section-title h2 { font-size: 1rem; color: var(--accent-dark); }
 .section-title p { font-size: 0.75rem; color: var(--text-muted); }
 
+/* Filter Ronde */
+.ronde-filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--card-bg);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--accent-dark);
+}
+
+.ronde-filter-container select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: #f8fafc;
+    font-size: 0.82rem;
+    font-weight: bold;
+    color: var(--accent-dark);
+    outline: none;
+    cursor: pointer;
+}
+
 .match-card {
     background: var(--card-bg);
     border-radius: 8px;
@@ -166,7 +193,18 @@ tr.top-4 td.col-rank {
     border-radius: 4px;
     font-size: 0.8rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: 4px;
+}
+
+.player-score {
+    color: #ffffff;
+    font-size: 0.68rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
 }
 
 
